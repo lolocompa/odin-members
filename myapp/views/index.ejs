@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('layout') %>
+    <div class="content">
+      <div class="info">
+        <h1>Store Inventory Home</h1>
+        <p>Welcome to Store Inventory, a very basic Express website.</p>
+        <h1>Dynamic content</h1>
+        <p>The inventory has the following record counts:</p>
+        <h3>Total books: <%= books_count %></h3>
+        <h3>Total books in stock: <%= total_books %></h3>
+        <h3>Total categories: <%= category_count %></h3>
+      </div>
+    </div>
+  </body>
+</html>

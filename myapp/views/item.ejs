@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('layout') %>
+    <div class="item_content">
+      <div class="item_div">
+        <h1>Title: <%= item.title %></h1>
+        <h2>Price: <%= item.price %></h2>
+        <h2>Count: <%= item.count %></h2>
+        <div class="wrapp">
+          <h4>Description</h4>
+          <h5><%= item.description %></h5>
+        </div>
+        <h2>Category: <%= item.category %></h2>
+        <h2>Author: <%= item.author %></h2>
+      </div>
+    </div>
+  </body>
+</html>

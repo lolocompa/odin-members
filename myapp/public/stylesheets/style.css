@@ -1,0 +1,93 @@
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.page_container {
+  padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.head_links {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside a {
+  margin: 20px 0;
+  color: black;
+}
+
+.aside hr {
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info p {
+  margin-bottom: 50px;
+}
+
+.content_all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container_titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_titles a {
+  margin: 10px;
+}
+
+.content_create {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input_container {
+  margin: 20px;
+}
+
+.input_container label {
+  margin-right: 10px;
+}
+
+.area {
+  display: flex;
+}
+
+.item_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapp {
+  flex-direction: row;
+  width: 800px;
+  display: flex;
+}
+
+.wrapp h4 {
+  margin-right: 10px;
+}

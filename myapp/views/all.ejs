@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('layout') %>
+    <div class="content_all">
+      <div class="container_titles">
+        <% for(let i = 0; i < all_items.length; i++) { %>
+        <a href="/<%= all_items[i].id %>"><%= all_items[i].title %></a>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
