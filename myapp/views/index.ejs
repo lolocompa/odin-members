@@ -7,16 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <%- include('layout') %>
-    <div class="content">
-      <div class="info">
-        <h1>Store Inventory Home</h1>
-        <p>Welcome to Store Inventory, a very basic Express website.</p>
-        <h1>Dynamic content</h1>
-        <p>The inventory has the following record counts:</p>
-        <h3>Total books: <%= books_count %></h3>
-        <h3>Total books in stock: <%= total_books %></h3>
-        <h3>Total categories: <%= category_count %></h3>
+    <div class="index_container">
+      <%- include('./partials/header') %>
+      <div class="content">
+        <% for(let i = 0; i < all_messages.length; i++) {%>
+        <div class="message_container">
+          <div class="left_section">
+            <h1><%= all_messages[i].title %></h1>
+            <p><%= all_messages[i].message_content %></p>
+            <h5><%= all_messages[i].date %></h5>
+          </div>
+          <div class="right_section">
+            <% if(user === all_messages[i].author.username) {%>
+            <form action="/delete_message" method="post">
+              <input type="hidden" name="message_id" value=<%= all_messages[i].id %>>
+              <button class="delete_message">Delete</button>
+            </form>
+            <% } %>
+            <h3>From <%= all_messages[i].author.username %></h3>
+          </div>
+        </div>
+        <% } %>
       </div>
     </div>
   </body>

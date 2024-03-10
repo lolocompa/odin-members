@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <%- include('./partials/header') %> <% if(is_user === false) {%>
+    <div class="please_login">
+      <h3>please login to write messages</h3>
+    </div>
+    <% } else {%>
+    <div class="write_form_container">
+      <form class="signup_form" action="/write/post_message" method="POST">
+        <h1>Write a message</h1>
+        <div class="form_container">
+          <label for="title">Title</label>
+          <input required name="title" type="text" />
+          <label for="message_Content">Content</label>
+          <textarea
+            required
+            name="message_content"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+    <% } %>
+  </body>
+</html>

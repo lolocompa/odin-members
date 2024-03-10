@@ -1,0 +1,15 @@
+<div class="header">
+  <div class="not_auth">
+    <a href="/">Home</a>
+    <a href="/write">Write message</a>
+  </div>
+  <div class="auth">
+    <a href="/sign-up">Sign up</a>
+    <% if(is_user === false) {%>
+    <a href="login">Login</a>
+    <% } %>
+    <% if(is_user === true) {%>
+      <a href="/logout">Logout</a>
+      <% } %>
+  </div>
+</div>
